@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Exercise 2</title>
+    <title>Exercise 2 | Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            overflow-x: hidden; 
+        }
+        h1,h2,h3,h4,h5,h6,p{
+            color: #666;
+        }
+        .header{      
+            background: rgba(255,110,110,1);
+            background: -moz-linear-gradient(-45deg, rgba(255,110,110,1) 0%, rgba(168,73,189,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,110,110,1)), color-stop(100%, rgba(168,73,189,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(255,110,110,1) 0%, rgba(168,73,189,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(255,110,110,1) 0%, rgba(168,73,189,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(255,110,110,1) 0%, rgba(168,73,189,1) 100%);
+            background: linear-gradient(135deg, rgba(255,110,110,1) 0%, rgba(168,73,189,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6e6e', endColorstr='#a849bd', GradientType=1 );
+            padding: 2rem;
+            margin-bottom: 50px;
+        }
+        .header h1{
+            color: #fff;
+        }
+        .content{
+            background: #dedede;
+            border: 1px solid #dedede;
+            padding: 1.5rem;
+        }
+        .content .row{
+            margin-bottom: 20px;
+        }
+        #screen{
+            border: 1px solid #666666;
+            padding:25px;
+            background: #f2f2f2;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+    </style>
+
+    <script>
+        var a = 1;
+        var b = 2;
+        var c = 3;
+        var d = 4;
+        var e = 5;
+        var f = 6;
+        var g = 7;
+        var h = 8;
+        var i = 9;
+        var j = 0;
+    </script>
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header">
+                <center>
+                    <h1>KALKULATOR</h1>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="content">
+                    <form>
+                        <input class="form-control" id="screen" value="0" />
+                    </form>
+                    <div class="button">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '7'">7</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '8'">8</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '9'">9</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block">X</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '4'">4</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '5'">5</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '6'">6</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block">-</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '1'">1</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '2'">2</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '3'">3</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block">+</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block">/</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '0'">0</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="document.getElementById('screen').value = '.'">.</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-block">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <br><br>
+    <p class="text-center">www.dwisign.com | 2019</p>
+    
 </body>
 </html>
